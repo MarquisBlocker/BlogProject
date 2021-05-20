@@ -1,0 +1,13 @@
+#jumbotron{
+background-color: blue;
+}
+
+p{
+color: red;
+font-size: 20px;
+}
+
+button{
+padding: 20px;
+color: green;
+}

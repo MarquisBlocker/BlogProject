@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--  <link rel="stylesheet" type="text/css" href="https://style.css"/>-->
+  <title>Blog Site</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class="body">
+
+<div class="container p-3 my-3 border">
+<h3>Blog Post Form</h3>
+<p>Thank you for your submission!</p>
+</div>
+
+<div class="container p-3 my-3 border">
+<h4>Blog Post:</h4>
+<p th:text="${title}" />
+<p th:text="${author}" />
+<p th:text="${blogEntry}" />
+</div>
+
+
+
+<div class="card" style="width: 15rem height:15rem;">
+  <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.askideas.com%2Fmedia%2F08%2FThe-Mask-Says-Thank-You-Animated-Gif.gif&f=1&nofb=1" alt="Card image cap">
+  <img src="https://media2.giphy.com/media/26gsjCZpPolPr3sBy/giphy.gif?cid=ecf05e47l135pn325pg3gnxkyjmqd90p4npt8r732h943ueb&rid=giphy.gif&ct=g">
+</div>
+
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright: Marquis Industries
+  </div>
+</footer>
+
+<style>
+  h3{font-size: 50px; color: black;}
+  h4{font-size: 50px; color: black;}
+  p{color: black; font-size: 20px;}
+  .body{background-color: yellow;}
+</style>
+
+
+</body>
+</html>

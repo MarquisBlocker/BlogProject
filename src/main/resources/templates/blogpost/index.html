@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--  <link rel="stylesheet" type="text/css" href="style.css"/>-->
+  <title>Blog Site</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to Our Blog Post Site!</h1>
+    <p class="lead">Check out our blogs!</p>
+  </div>
+</div>
+
+<div class="card" style="width: 25rem;">
+  <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Ffrustrated-blogger-26763558.jpg&f=1&nofb=1" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Please use the form below to submit a Blog Post:</h5>
+    <form action="#" th:action="@{/}" th:object="${blogPost}" method="post">
+  <table>
+    <tr>
+      <td>Title</td>
+      <td><input type="text" th:field="*{title}" /></td>
+    </tr>
+    <tr>
+      <td>Author:</td>
+      <td><input type="text" th:field="*{author}" /></td>
+    </tr>
+    <tr>
+      <td>Blog Entry:</td>
+      <td><input type="text" th:field="*{blogEntry}" /></td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary" type="submit">Submit Your Post</button></td>
+    </tr>
+  </table>
+</form>
+  </div>
+</div>
+
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright: Marquis Industries
+  </div>
+</footer>
+
+<style>
+  btn btn-primary{ margin-top: 20px; float: right;}
+
+
+</style>
+
+</body>
+</html>
