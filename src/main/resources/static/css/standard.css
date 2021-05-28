@@ -1,0 +1,35 @@
+body{
+	background-color: #d62655;
+
+}
+
+.container{
+	background-color: rgba(255, 255, 255, 0.8);
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+}
+
+.blogger{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+
+}
+
+
+.blogger1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.navbar-brand{
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+
+}

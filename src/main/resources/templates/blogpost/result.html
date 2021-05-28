@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--  <link rel="stylesheet" type="text/css" href="https://style.css"/>-->
+  <meta charset="UTF-8">
   <title>Blog Site</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <div th:replace="fragments/styling :: head-style" ></div>
 </head>
-<body class="body">
-
-<div class="container p-3 my-3 border">
-<h3>Blog Post Form</h3>
-<p>Thank you for your submission!</p>
-</div>
-
-<div class="container p-3 my-3 border">
-<h4>Blog Post:</h4>
-<p th:text="${title}" />
-<p th:text="${author}" />
-<p th:text="${blogEntry}" />
-</div>
-
-
-
-<div class="card" style="width: 15rem height:15rem;">
-  <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.askideas.com%2Fmedia%2F08%2FThe-Mask-Says-Thank-You-Animated-Gif.gif&f=1&nofb=1" alt="Card image cap">
-  <img src="https://media2.giphy.com/media/26gsjCZpPolPr3sBy/giphy.gif?cid=ecf05e47l135pn325pg3gnxkyjmqd90p4npt8r732h943ueb&rid=giphy.gif&ct=g">
-</div>
-
-<footer class="bg-light text-center text-lg-start">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright: Marquis Industries
+<body>
+<div class="container">
+  <img class="blogger" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Ffrustrated-blogger-26763558.jpg&f=1&nofb=1" >">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 th:text="${title}"></h1>
+        </div>
+        <div class="panel-body">
+          <strong><p th:text="${author}"/></strong>
+          <p th:text="${blogEntry}" />
+        </div>
+        <div class="panel-footer">
+          <!-- Link to Update -->
+          <!-- Link to Show  -->
+          <!--  Link to Destroy -->
+          <a th:href="@{/blogposts}"><button class="btn btn-success">Back To Home Page</button></a>
+          <a th:href="@{/blogposts/new}"><button class="btn btn-primary">Submit a New Blog Post</button></a>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
-
-<style>
-  h3{font-size: 50px; color: black;}
-  h4{font-size: 50px; color: black;}
-  p{color: black; font-size: 20px;}
-  .body{background-color: yellow;}
-</style>
-
-
+</div>
+<script src="../../webjars/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<script src="../../webjars/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
